@@ -1,13 +1,31 @@
-<html>
-<head>
-  <title>Firebase Login</title>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<!--	<meta http-equiv="refresh" content="5; URL='home.html'" />-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/x-icon" href="logo/lo.ico">
 </head>
 <body>
+	<div id="titlebar" class="title">
+	
+	    <h3>Welcome User</h3>
+		<p id="user_para"></p>
 
+	</div>
+	<div class="container" id="logo">
+          
+		<img src="logo/a.png" class="img-rounded" id="logo_com" alt="logo" > 
+		
+    </div>
+	
   <div id="login_div" class="main-div">
-    <h3>login Here </h3>
+    <h3> Please login here</h3>
     <input type="email" placeholder="Email..." id="email_field" />
     <input type="password" placeholder="Password..." id="password_field" />
 
@@ -15,26 +33,47 @@
   </div>
 
   <div id="user_div" class="loggedin-div">
-    <h3>Welcome User</h3>
-    <p id="user_para">Welcome to Firebase web login . You're currently logged in.</p>
+
     <button onclick="logout()">Logout</button>
   </div>
 
 
+	<div class="mainpannel" id="selection_panel">
+	    <div id="home" class="zoom">
+			<a href="wait.html">
+				<img src="logo/home.jpg" class="img-rounded" alt="Home Automation"  > 
+			</a>
+	
+			<h2>Home Automation</h2>
+		</div>
+		<div id="building" class="zoom">
+				<a href="wait.html">
+			<img src="logo/building.jpg" class="img-rounded" alt="Building Automation"  > 
+			</a>
+	 
+			<h2>Building Automation</h2>
+		</div>
+		<div id="factory"class="zoom" >
+				<a href="wait.html">
+			<img src="logo/factory.jpg" class="img-rounded" alt="Factory Automation" > 
+			</a>
 
-<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBA3DgWVLxid0dw9UhoZgOneyjOu4zVsHE",
-    authDomain: "dimension-d27f1.firebaseapp.com",
-    databaseURL: "https://dimension-d27f1.firebaseio.com",
-    projectId: "dimension-d27f1",
-    storageBucket: "",
-    messagingSenderId: "708529966649"
-  };
-  firebase.initializeApp(config);
-</script>
+			<h2>Factory Automation</h2>
+		</div>
+		<div id="green" class="zoom">
+				<a href="wait.html">
+			<img src="logo/greenhouse.jpg" class="img-rounded" alt="Greenhouse Automation" > 
+			</a>
+		
+			<h2>Greenhouse Automation</h2>
+		</div>
+	
+	
+	
+	</div>
+
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+
   <script src="index.js"></script>
 
 </body>
